@@ -5,7 +5,9 @@
 <?php include "header2.php" ?>
 <?php include "header.php" ?>
 <?php include "access.php" ?>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+
 	<style>
 
 		#ck-button {
@@ -40,7 +42,33 @@
 			top:-20px;
 			display:none;
 		}
-		
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.flex-container > #ck-button {
+			background-color: #f1f1f1;
+			width: 100px;
+			margin: 5px;
+			text-align: center;
+			line-height: 75px;
+			font-size: 5px;
+		}
+		/* @media only screen and (max-width:366 px) {
+			.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.flex-container > #ck-button {
+			background-color: #f1f1f1;
+			width: 50%;
+			margin: 5px;
+			text-align: center;
+			line-height: 75px;
+			font-size: 5px;
+		} */
+
+		}
 	</style>
 	
 </head> 
@@ -113,7 +141,7 @@
 				<input type="radio" name="att"  value="1" onclick="pre(1)" id="a">Present</input>
 				<input type="radio"  name="att"  value="0" onclick="pre(0)" id="a">Absent</input>
 		
-			<div class="form-inline col-md-6">
+			<div class="form-group col-md-6  flex-container">
 			<?php
 					$url="localhost";
 					$user="root";
